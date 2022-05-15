@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="es-ES"><head>
+<meta charset="utf-8">
+<title>Transiciones, Transformaciones y Animaciones con CSS</title>
+
+<!-- Información sobre el documento web -->
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="description" content="Confección y publicación de páginas web">
+<meta name="author" content="Jennifer">
+<meta name="generator" content="DW">
+	
+<!-- Etiquetas de adaptación del contenido -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<!-- FAVICON (icono de favoritos)-->
+<link rel="icon" href="img/favicon.ico" type="image/png">
+
+<!-- Enlace externo a un documento de estilos CSS -->
+<link rel="stylesheet" href="css/estilos-pelis.css" type="text/css">
+	
+<!-- Enlace externo a un documento de funciones JavaScript -->
+<script src="js/funciones-pelis.js"></script>
+
+<!-- Enlace externo a un tipo de letra de Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<!-- Enlace externo a un tipo de iconos de Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	
+</head>
+
+<body>
+<!-- ADD NAV & CLASS -->
+<nav class="nav">
+	<div class="topnav" id="myTopnav">
+	  <a href="#peliculas" class="active-nav">Películas</a>
+	  <a href="#novedades">Novedades</a>
+	  <a href="#series">Series</a>
+	  <div class="dropdown">
+		<button class="dropbtn">Salas
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+		  <a href="#">Sala 1</a>
+		  <a href="#">Sala 2</a>
+		  <a href="#">Sala 3</a>
+		</div>
+	  </div>
+	  <a href="#infantil">Infantil</a>
+	  <a href="javascript:void(0);" class="icon" onclick="responsive()">&#9776;</a>
+	</div>
+</nav>
+	
+	
+<!--  DIV CONTAINER -->
+<div class="container">
+
+ <!---------------NEW SLIDE---------->
+<!-- ADD HEADER -->
+<!--<header>-->
+	
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="img/estrenos1.jpg" alt="estrenos1" style="width:100%">
+    <div class="text">Primera sesión: películas de estreno</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="img/estrenos2.jpg" alt="estrenos2" style="width:100%">
+    <div class="text">Segunda sesión: películas de estreno</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="img/estrenos3.jpg" alt="estrenos3" style="width:100%">
+    <div class="text">Tercera sesión: películas de estreno</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+	window.onload = slideShow()
+</script>
+<!--</header>-->
+<!---------------FIN NEW SLIDE---------->
+	
+<!--  DIV GENERAL -->	
+<div class="divGeneral">
+<!--  IMAGEN 1 -->
+<div class="contenedor">
+	<img src="img/pelis/aniquilacion.jpg" alt="imagen avatar" title="Avatar" class="imagen">
+	<div class="superponerTop">
+		<div class="texto">
+		<h3>Aniquilación</h3><p>Lena, bióloga y antigua soldado, se une a la misión que busca a su esposo, desaparecido en una región poblada por criaturas terroríficas, tan hermosas como mortíferas.</p>
+		<!-- Trigger/Open The Modal -->
+		<button id="myBtn1" class="boton" onClick="cajaModal1()">Ver trailer</button>
+		</div>
+	</div>
+</div>
+<!-- The Modal -->
+	<div id="myModal1" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close1">&times;</span>
+			<iframe width="100%" height="400px" src="https://www.youtube.com/embed/JIGXgCvLTXU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+<!--  FIN IMAGEN 1 -->
+<!--  ---------------------------------------- -->
+<!--  IMAGEN 2 -->
+    <div class="contenedor">
+        <img src="img/pelis/black-panther.jpg" alt="imagen avatar" title="Avatar" class="imagen">
+        <div class="superponerBottom">
+       	  <div class="texto">
+			<h3>Black Panther</h3><p>T'Challa regresa a su nación, Wakanda y asume la personalidad de Pantera Negra para salvar al reino de Wakanda y a toda la humanidad.</p>
+       	  	<!-- Trigger/Open The Modal -->
+			<button id="myBtn2" class="boton" onClick="cajaModal2()">Ver trailer</button>
+   		</div>
+    	</div>
+	</div>
+   
+   <!-- The Modal -->
+	<div id="myModal2" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close2">&times;</span>
+			<iframe width="100%" height="400px" src="https://www.youtube.com/embed/repsxoJnobc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+<!--  FIN IMAGEN 2 -->
+<!--  ---------------------------------------- -->
+<!--  IMAGEN 3 -->
+    <div class="contenedor">
+        <img src="img/pelis/deadpool.jpg" alt="imagen avatar" title="Avatar" class="imagen">
+        <div class="superponerLeft">
+       	  <div class="texto">
+       	  <h3>Deadpool</h3>
+       	  <p>Wade Wilson, después de ser sometido a un cruel experimento, adquiere super poderes y un retorcido sentido del humor, y persigue al hombre que casi destrozó su vida.</p>
+       	  <button id="myBtn3" class="boton" onClick="cajaModal3()">Ver trailer</button>
+       	  </div>
+    	</div>
+	</div>
+      <!-- The Modal -->
+	<div id="myModal3" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close3">&times;</span>
+		<iframe width="100%" height="400" src="https://www.youtube.com/embed/K6roT2icV9Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+<!--  FIN IMAGEN 3 -->
+<!--  ---------------------------------------- -->
+<!--  IMAGEN 4 -->
+        <div class="contenedor">
+        <img src="img/pelis/star-wars-los-ultimos-jedi.jpg" alt="imagen avatar" title="Avatar" class="imagen">
+        <div class="superponerRight">
+       	  <div class="texto"><h3>Star Wars</h3><p>La Primera Orden ha acorralado a los últimos miembros de la resistencia. Su última esperanza es que Finn se introduzca en la nave de Snoke y desactive el radar que les permite localizarlos.</p>
+       	  <button id="myBtn4" class="boton" onClick="cajaModal4()">Ver trailer</button>
+       	  </div>
+    	</div>
+	</div>
+          <!-- The Modal -->
+	<div id="myModal4" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close4">&times;</span>
+		<iframe width="100%" height="400" src="https://www.youtube.com/embed/VyFyxU7zB9w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+<!--  FIN IMAGEN 4 -->
+<!--  ---------------------------------------- -->
+<!--  IMAGEN 5 -->
+    <div class="contenedor">
+        <img src="img/pelis/el-amanecer-del-planeta-de-los-simios.jpg" alt="imagen avatar" title="Avatar" class="imagen">
+      <div class="superponerTodo">
+       	<div class="texto"><h3>El amanecer del planeta de los simios</h3><p>Los simios genéticamente evolucionados de César y los humanos sobrevivientes de un virus mortal batallan por la supremacía.</p>
+       	<button id="myBtn5" class="boton" onClick="cajaModal5()">Ver trailer</button>
+       	</div>
+   	  </div>
+  </div>
+             <!-- The Modal -->
+	<div id="myModal5" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close5">&times;</span>
+		<iframe width="100%" height="400" src="https://www.youtube.com/embed/akZXXR_0qVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+<!--  FIN IMAGEN 5 -->
+<!--  ---------------------------------------- -->
+<!--  IMAGEN 6 -->
+    <div class="contenedor">
+        <img src="img/pelis/el-corredor-del-laberinto.jpg" alt="imagen avatar" title="Avatar" class="imagen">
+      <div class="superponerBottomCorto">
+       	<div class="texto">
+       	<h3>El corredor del laberinto</h3>
+       	<p>Las memorias de unos niños son borradas y deben unirse para escapar de un laberinto en el que están atrapados.</p>
+       	<button id="myBtn6" class="boton" onClick="cajaModal6()">Ver trailer</button>
+       	</div>
+   	  </div>
+  </div>
+                 <!-- The Modal -->
+	<div id="myModal6" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close6">&times;</span>
+		<iframe width="100%" height="400" src="https://www.youtube.com/embed/gHIoC80urRw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+<!--  FIN IMAGEN 6 -->
+<!--  ---------------------------------------- -->
+<!--  IMAGEN 7-->
+    <div class="contenedor">
+      <img src="img/pelis/los-vengadores.jpg" alt="imagen avatar" title="Avatar" class="imagen">
+      <div class="superponerMiddleCorto">
+       	<div class="texto">
+       	<h3>Los Vengadores</h3>
+       	<p>Los Vengadores son un equipo ficticio de superhéroes que aparecen en cómics estadounidenses publicados por Marvel Comics.</p>
+       	<button id="myBtn7" class="boton" onClick="cajaModal7()">Ver trailer</button>
+       	</div>
+   	  </div>
+  </div>
+                 <!-- The Modal -->
+	<div id="myModal7" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close7">&times;</span>
+		<iframe width="100%" height="400" src="https://www.youtube.com/embed/HQIiYqOVTWo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+<!--  FIN IMAGEN 7 -->
+<!--  ---------------------------------------- -->
+<!--  IMAGEN 8 -->    
+    <div class="contenedor">
+        <img src="img/pelis/piratas-del-caribe-la-maldicion-de-la-perla-negra.jpg" alt="imagen avatar" title="Avatar" class="imagen">
+      <div class="superponerTopCorto">
+       	<div class="texto">
+       	<h3>Piratas del Caribe</h3>
+       	<p>Un herrero y un extraño pirata se unen para rescatar a una dama secuestrada de un capitán de piratas y su tripulación.</p>
+       	<button id="myBtn8" class="boton" onClick="cajaModal8()">Ver trailer</button>
+       	</div>
+   	  </div>
+  </div>
+                 <!-- The Modal -->
+	<div id="myModal8" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close8">&times;</span>
+		<iframe width="100%" height="400" src="https://www.youtube.com/embed/4s67PU-s1kc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+<!--  FIN IMAGEN 8 -->
+<!--  ---------------------------------------- -->
+<!--  IMAGEN 9 -->
+<div class="contenedor">
+        <img src="img/pelis/guardianes-galaxia.jpg" alt="imagen avatar" title="Avatar" class="imagen">
+    <div class="superponerTopLeft-BottomRight">
+       	<div class="texto">
+       	<h3>Guardianes de la Galaxia</h3>
+       	<p>Un aventurero espacial se convierte en la presa de unos cazadores de tesoros y deberá encontrar la forma de unir a unos rivales para salvar al universo.</p>
+       	<button id="myBtn9" class="boton" onClick="cajaModal9()">Ver trailer</button>
+       	</div>
+   	  </div>
+  </div>
+                 <!-- The Modal -->
+	<div id="myModal9" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close9">&times;</span>
+		<iframe width="100%" height="400" src="https://www.youtube.com/embed/KeiSpIWPtgQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+<!--  FIN IMAGEN 9 -->
+<!--  ---------------------------------------- -->
+<!--  IMAGEN 10 -->
+    <div class="contenedor">
+        <img src="img/pelis/jurassic-world.jpg" alt="imagen avatar" title="Avatar" class="imagen">
+      <div class="superponerTopRight-BottomLeft">
+       	<div class="texto">
+       	<h3>Jurassic World</h3>
+       	<p> Una nueva especie de dinosaurio, creada por científicos de forma artificial, ataca a los turistas que visitan el parque temático<br> "Jurassic World".</p>
+       	<button id="myBtn10" class="boton" onClick="cajaModal10()">Ver trailer</button>
+       	</div>
+   	  </div>
+  </div>
+                 <!-- The Modal -->
+	<div id="myModal10" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close10">&times;</span>
+		<iframe width="100%" height="400" src="https://www.youtube.com/embed/ced25s2IoBE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+<!--  FIN IMAGEN 10 -->
+<!--  ---------------------------------------- -->
+<!--  IMAGEN 11 -->  
+    <div class="contenedor">
+      <img src="img/pelis/liga-de-la-justicia.jpg" alt="imagen avatar" title="Avatar" class="imagen">
+      <div class="superponerBottomLeft-TopRight">
+       	<div class="texto">
+       	<h3>Liga de la Justicia </h3>
+       	<p> Gracias a su renovada fe en la humanidad e inspirado por el acto de altruísmo de Superman, Bruce Wayne pide ayuda a su nueva aliada, Diana Prince, para enfrentarse a un enemigo aún más peligroso.</p>
+       	<button id="myBtn11" class="boton" onClick="cajaModal11()">Ver trailer</button>
+       	</div>
+   	  </div>
+  </div>
+                 <!-- The Modal -->
+	<div id="myModal11" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close11">&times;</span>
+		<iframe width="100%" height="400" src="https://www.youtube.com/embed/2OuTUys9Kqc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+<!--  FIN IMAGEN 11 -->
+<!--  ---------------------------------------- -->
+<!--  IMAGEN 12 -->     
+    <div class="contenedor">
+        <img src="img/pelis/Thor-el-valor-es-inmortal.jpg" alt="imagen avatar" title="Avatar" class="imagen">
+      <div class="superponerBottomRight-TopLeft">
+       	<div class="texto">
+       	<h3>Thor: El valor es inmortal </h3>
+       	<p>El dios Norse es expulsado de Asgard y es obligado a vivir entre los humanos en la Tierra después de que sus acciones imprudentes reiniciaron una guerra antigua.</p>
+       	<button id="myBtn12" class="boton" onClick="cajaModal12()">Ver trailer</button>
+       	</div>
+   	  </div>
+  </div>
+                 <!-- The Modal -->
+	<div id="myModal12" class="modal">
+
+		<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close12">&times;</span>
+		<iframe width="100%" height="400" src="https://www.youtube.com/embed/m9m7iYfR3d8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+<!--  FIN IMAGEN 12 -->
+  
+</div>
+<!--  FIN DIV GENERAL -->	
+	
+<!--  NEW PESTAÑAS CONMUTABLES = Create Toggleable Tabs -->
+<!--  ---------------------------------------- -->
+<!-- ADD DIV -->
+<div class="tabs">
+	<!-- Tab links -->
+	<div class="tab">
+	  <button class="tablinks active" onclick="openTabs(event, 'Cartelera')">CARTELERA</button>
+	  <button class="tablinks" onclick="openTabs(event, 'Novedades')">NOVEDADES</button>
+	  <button class="tablinks" onclick="openTabs(event, 'Proximamente')">PRÓXIMOS</button>
+	</div>
+
+	<!-- Tab content -->
+	<div id="Cartelera" class="tabcontent" style="display: block">
+	  <img src="img/cine-Collage-1.jpg" alt="Collage-1" style="width: 100%">
+	</div>
+
+	<div id="Novedades" class="tabcontent">
+	 <img src="img/cine-Collage-2.jpg" alt="Collage-2" style="width: 100%">
+	</div>
+
+	<div id="Proximamente" class="tabcontent">
+	  <img src="img/cine-Collage-3.jpg" alt="Collage-3" style="width: 100%">
+	</div>
+</div>
+<!--  FIN NEW PESTAÑAS CONMUTABLES -->
+	
+	
+</div>
+<!--  FIN DIV CONTAINER -->	
+
+<!--  NEW BARRA ICONOS REDES SOCIALES -->
+<!--  ---------------------------------------- -->	
+<!-- The social media icon bar -->
+<div class="icon-social-bar">
+  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fa fa-google"></i></a>
+  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+
+<!--  NEW BARRA ICONOS -->
+<!--  ---------------------------------------- -->	
+<!-- Create an Icon Bar -->	
+<div class="icon-bar">
+  <a class="active-bar" href="#"><i class="fa fa-home"></i></a>
+  <a href="#"><i class="fa fa-search"></i></a>
+  <a href="#"><i class="fa fa-envelope"></i></a>
+  <a href="#"><i class="fa fa-globe"></i></a>
+  <a href="#"><i class="fa fa-trash"></i></a>
+</div>
+	
+<!--  BOTON VOLVER -->
+<!--  ---------------------------------------- -->	
+<div class="buttonCenter">
+	<a href="https://www.20659alumno12.com/"><button class="button2"><span>Volver principal</span></button></a>
+</div>
+	
+	
+</body>
+</html>

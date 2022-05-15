@@ -1,0 +1,789 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: 'Roboto', Sans-serif;
+	background-image: url("../img/fondo.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;/*IMG FONDO FIJA*/
+	background-repeat: repeat;
+	padding: 0;
+	margin: 50px 0;/*top y bottom 50px | left y right 0*/
+	/*margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 0;
+	margin-right: 0;*/
+}
+/*===================================
+          NEW SLIDE W3S 
+===================================== */
+/*.header {
+	width: 80%;
+	margin: 25px auto;
+}*/
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  width: 80%;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #fefefe;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #4CAF50 /*#717171*/;
+}
+
+/* Fading animation */ /*Efecto de animacion que se desvanece*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+/*------FIN NEW SLIDE W3S----------*/
+
+
+/*==========================================
+     NEW MODAL BOX W3S YOUTUBE TRAILERS
+============================================ */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #46a049/*#fefefe*/;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close1, .close2, .close3, .close4, .close5, .close6, .close7, .close8, .close9, .close10, .close11, .close12 {
+  color: #fefefe /*#aaa*/;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close1:hover, .close2:hover, .close3:hover, .close4:hover, .close5:hover, .close6:hover, .close7:hover, .close8:hover, .close9:hover, .close10:hover, .close11:hover, .close12:hover,
+.close1:focus, .close2:focus, .close3:focus, .close4:focus, .close5:focus, .close6:focus, .close7:focus, .close8:focus, .close9:focus, .close10:focus, .close11:focus, .close12:focus{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*--------FIN NEW MODAL BOX W3S----------*/
+
+/*===================================
+          NEW FLEX CONTAINER
+===================================== */
+.divGeneral {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: space-between;
+}
+
+.imagen {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.contenedor{
+	margin: 10px;
+	width: 20%;/*SALEN 4 CAJAS CON 25% SALDRIAN 3 CAJAS EN CADA FILA*/
+	border: 10px solid #fefefe;
+	/*border-radius: 10px;*/
+	background-color: rgba(200,200,200,1.00);
+	position: relative;
+}
+.contenedor:hover {
+	/*animation:name>duration>delay>iteration-count>direction>timing-function>fill-mode*/
+	animation: animacion1 5s 0s infinite alternate linear none;
+	/*izq>dcha>desenfoque>amplitud>color*/	
+	box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes animacion1 {
+	  0%   {border-color: crimson;}
+	  25%  {border-color: aqua;}
+	  50%  {border-color: darkorange;}
+	  75%  {border-color: forestgreen;}
+	  100% {border-color: royalblue;}
+}
+
+/*===================================
+  MEDIAS QUERYS DEL CONTENEDOR 
+===================================== */
+/*AJUSTAR SIEMPRE @MEDIA AL CONTENIDO --> 100% 4 CAJAS*/
+/*1024(x) -> CUANDO PASA DE 1100 CAMBIA ANCHO A 25% 3 CAJAS*/
+@media screen and (max-width: 1100px) {
+  .contenedor {width: 25%;}
+}
+/*800(x) -> CUANDO PASA DE 920 CAMBIA ANCHO A 40% 2 CAJAS*/
+@media screen and (max-width: 920px) {
+  .contenedor {width: 40%;}
+}
+/*640(✔) -> CUANDO PASA DE 640 CAMBIA ANCHO A 60% 1 CAJA*/
+@media screen and (max-width: 640px) {
+  .contenedor {width: 60%;}
+}
+/*-----FIN NEW FLEX CONTAINER------------*/
+
+/*===================================
+  BOTON, TEXTO Y SUS TRANSICIONES 
+===================================== */
+.boton {
+  border: none;
+  background-color: #46a049/*!important*/;
+  color: #fefefe;
+  font-size: 1em;
+  padding: 12px 24px;
+  cursor: pointer;
+  box-shadow: none;
+  border-radius: 5px;
+  text-align: center;
+}
+.boton:hover{
+	background-color: black;
+}
+
+.texto {
+	position: absolute;/*PONER DIV PADRE .contenedor EN ELATIVE*/
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);/*PARA NAV WEBKIT*/
+	-ms-transform: translate(-50%, -50%);/*PARA NAV MICROSOFT*/
+	color: #fefefe;
+	text-align: center;
+	width: 90%;/*EL TEXTO OCUPA EL 90% DE ANCHO DE LA CAJA*/
+	font-size: 0.9em;
+	overflow: hidden;
+	/*white-space: wrap;*/
+}
+
+/* =================================
+     TRANSICIONES DE LOS POSTERS
+=================================== */
+
+/* === CAJA 1 OVERLAY SLIDE TOP  === */
+.superponerTop {
+  position: absolute;
+  bottom: 100%;/*PASA A 0%*/
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;/*PASA A 100%*/
+  transition: .5s ease;
+}
+.contenedor:hover .superponerTop {
+	bottom: 0;/*DESDE 100%*/
+	height: 100%;/*DESDE 0%*/
+	opacity: 0.9;
+}
+
+/* === CAJA 2 OVERLAY SLIDE BOTTOM === */
+.superponerBottom {
+  position: absolute;
+  bottom: 0;/*PASA A 100%*/
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;/*PASA A 100%*/
+  transition: .5s ease;
+}
+.contenedor:hover .superponerBottom {
+  height: 100%;/*DESDE 0%*/
+  opacity: 0.9;
+}
+
+/* === CAJA 3 OVERLAY SLIDE LEFT === */
+.superponerLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%;/*PASA A 0%*/
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;/*PASA A 100%*/
+  height: 100%;
+  transition: .5s ease;
+}
+.contenedor:hover .superponerLeft {
+  width: 100%;/*DESDE 0%*/
+  right: 0;/*DESDE 100%*/
+  opacity: 0.9;
+	
+}
+
+/* === CAJA 4 OVERLAY SLIDE RIGHT === */
+.superponerRight {
+  position: absolute;
+  bottom: 0;
+  left: 100%;/*PASA A 0%*/
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;/*PASA A 100%*/ /*SI PONGO 100 SALE DESDE FUERA*/
+  height: 100%;
+  transition: .5s ease;
+}
+.contenedor:hover .superponerRight {
+  width: 100%;/*DESDE 0%*/
+  left: 0;/*DESDE 100%*/
+  opacity: 0.9;
+}
+
+/* === CAJA 5 OVERLAY FADE ALL === */
+.superponerTodo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.contenedor:hover .superponerTodo {
+  opacity: 0.9;
+}
+
+/* === CAJA 6 OVERLAY FADE BOTTOM === */
+.superponerBottomCorto {
+  position: absolute;
+  bottom: 0;
+  height: 80%;/*OCUPA 80 DE ABAJO HACIA ARRIBA, DEJA 20% LIBRE EN EL TOP*/
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.contenedor:hover .superponerBottomCorto {
+  opacity: 0.9;
+}
+
+/* === CAJA 7 OVERLAY FADE MIDDLE === */
+.superponerMiddleCorto {
+  position: absolute;
+  top: 10%;/*DE LOS 20% DISPONIBLES SOLO DEJA 10% LIBRE EN EL TOP*/
+  bottom: 0;
+  left: 0;
+  height: 80%;/*OCUPA 80 DE ABAJO HACIA ARRIBA, DEJA 20% LIBRE EN EL TOP*/
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.contenedor:hover .superponerMiddleCorto {
+  opacity: 0.9;
+}
+
+/* === CAJA 8 OVERLAY TOP CORTO === */
+.superponerTopCorto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80%;
+  width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.contenedor:hover .superponerTopCorto {
+  opacity: 0.9;
+}
+
+/* === CAJA 9 OVERLAY DIAGONAL TOP/IZQ HASTA ESQUINA ABAJO/DCHA === */
+.superponerTopLeft-BottomRight{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.contenedor:hover .superponerTopLeft-BottomRight {
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+}
+
+/* === CAJA 10 OVERLAY DIAGONAL TOP/DCHA HASTA ESQUINA ABAJO/IZQ === */
+.superponerTopRight-BottomLeft{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.contenedor:hover .superponerTopRight-BottomLeft {
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+}
+
+/* === CAJA 11 OVERLAY DIAGONAL ABAJO/IZQ HASTA ESQUINA TOP/DCHA === */
+.superponerBottomLeft-TopRight{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.contenedor:hover .superponerBottomLeft-TopRight {
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+}
+
+/* === CAJA 12 OVERLAY DIAGONAL BTN/DCHA HASTA ESQUINA TOP/IZQ === */
+.superponerBottomRight-TopLeft{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+.contenedor:hover .superponerBottomRight-TopLeft {
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+}
+
+/*===========================================
+     NEW TABS W3S - PESTAÑAS CONMUTABLES 
+============================================= */
+/*NEW DIV .tabs*/
+.tabs {
+	width:  80%;
+	margin: 25px auto;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+/*border: 1px solid #ccc;
+  background-color: #f1f1f1;*/ /*SOLO DEJAMOS FONDO A LOS BOTONES DE LAS PESTAÑAS*/
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: #46a049 /*inherit*/;
+  color: white;/*ADD*/
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  border-top-left-radius: 15px;/*ADD*/
+  border-top-right-radius: 15px;/*ADD*/
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #4CAF50 /*#ddd*/;
+  border-top-left-radius: 15px;/*ADD*/
+  border-top-right-radius: 15px;/*ADD*/
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #008CBA /*#ccc*/;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: white;/*ADD*/
+}
+/*--------FIN NEW TABS W3S CONMUTABLES----------*/
+
+/*===========================================
+  NEW VERTICAL STICKY SOCIAL BAR DCHA W3S
+============================================= */
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-social-bar {
+  position: fixed;
+  top: 50%;
+  right: 0;/*ADD CAMBIO A LA DCHA*/
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* Style the icon bar links */
+.icon-social-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-social-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.youtube {
+  background: #bb0000;
+  color: white;
+}
+/*--------FIN NEW STICKY SOCIAL BAR W3S----------*/
+
+/*===========================================
+  NEW BARRA DE ICONOS VERTICAL IZQ W3S
+============================================= */
+.icon-bar {
+  /*width: 90px;*/ /* Set a specific width */
+  background-color: #555; /* Dark-grey background */
+  position: fixed;/*ADD COPY FROM RR.SS.|| left: 0; ES POR DEFECTO*/
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);	
+}
+
+.icon-bar a {
+  display: block; /* Make the links appear below each other instead of side-by-side */
+  text-align: center; /* Center-align text */
+  padding: 16px; /* Add some padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 20px; /* Increased font-size */
+}
+
+.icon-bar a:hover {
+  background-color: #000; /* Add a hover color */
+}
+
+.active-bar {
+  background-color: #4CAF50; /* Add an active/current color */
+}
+/*--------FIN NEW BARRA DE ICONOS W3S----------*/
+
+/*==============================================
+  TOPNAV RECEPTIVO CON MENU DESPLEGABLE W3S
+================================================ */
+.nav {
+	width: 80%;
+	margin: 25px auto;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Add an active class to highlight the current page */
+.active-nav {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgba(0,140,186,0.5) /*#ddd*/;
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 640px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+/*--------FIN TOPNAV RECEPTIVO CON MENU DESPLEGABLE----------*/
+
+/*================
+      BOTON 2
+================== */
+.buttonCenter {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.button2 {	
+  border-radius: 15px;
+  background-color: #008CBA;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 10px;
+  width: 250px;
+  /*transition: all 0.5s;*/
+  cursor: pointer;
+  margin: 5px;
+  box-shadow: 0 5px #999;
+}
+
+.button2:hover {background-color: #3e8e41}
+
+.button2:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+	
+.button2 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
